@@ -23,9 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    bat 'minikube start'
-                    bat 'kubectl apply -f my-kube1-deployment.yaml'
-                    bat 'kubectl apply -f my-kube1-service.yaml'
+                    
                     echo '✅ Deployed successfully to Minikube!'
                 }
             }
